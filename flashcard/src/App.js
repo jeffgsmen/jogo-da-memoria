@@ -9,6 +9,7 @@ function App() {
 
   const dica = [ 'DICA1','DICA2', 'DICA3', 'DICA4' ]
   const resposta = ['RESPOSTA1', 'RESPOSTA2', 'RESPOSTA3', 'RESPOSTA4']
+
   const hadlerButton = () => {
     setIsDica(true);
     if (count === (dica.length -1)) {
@@ -30,7 +31,7 @@ function App() {
       <h1>
           Flash Card
       </h1>
-      <div onClick={ () => setIsDica(!isDica) }>
+      <div className='card' onClick={ () => setIsDica(!isDica) }>
             {!fim ?
               (isDica ? dica[count] : resposta[count]) : (
                 'Fim do jogo'
@@ -38,12 +39,12 @@ function App() {
             }
       </div>
       <br/>
-      {!fim ? (<button onClick={ () => hadlerButton() }>
+      {!fim ? (<button className='btn' onClick={ () => hadlerButton() }>
             próxima
       </button>) : <br/> }
       {fim ? (
-          <button onClick={ () => iniciarJogo() }>
-              JOGAR NOVAMENTE
+          <button className='btn' onClick={ () => iniciarJogo() }>
+              início
         </button>
         ) : <br/>
       }
