@@ -2,15 +2,16 @@ import './App.css';
 import { useState } from 'react'
 
 function App() {
-  const [isPergunta, setIsPergunta] = useState(true)
+  const [isDica, setIsDica] = useState(true)
   const [count, setCount] = useState(0)
   const [fim, setfim] = useState(false)
+  // https://pt-br.reactjs.org/docs/hooks-state.html
 
-  const perguntas = [ 'exPergunta1','exPergunta2' ]
-  const resposta = ['exResposta1', 'exResposta2']
+  const dica = [ 'DICA1','DICA2', 'DICA3', 'DICA4' ]
+  const resposta = ['RESPOSTA1', 'RESPOSTA2', 'RESPOSTA3', 'RESPOSTA4']
   const hadlerButton = () => {
-    setIsPergunta(true);
-    if (count === (perguntas.length -1)) {
+    setIsDica(true);
+    if (count === (dica.length -1)) {
       setfim(true)
     } else {
       let soma = count
@@ -19,7 +20,7 @@ function App() {
   }
 
   const iniciarJogo = () => {
-    setIsPergunta(true)
+    setIsDica(true)
     setCount(0)
     setfim(false)
   }
@@ -29,9 +30,9 @@ function App() {
       <h1>
           Flash Card
       </h1>
-      <div onClick={ () => setIsPergunta(!isPergunta) }>
+      <div onClick={ () => setIsDica(!isDica) }>
             {!fim ?
-              (isPergunta ? perguntas[count] : resposta[count]) : (
+              (isDica ? dica[count] : resposta[count]) : (
                 'Fim do jogo'
               )
             }
