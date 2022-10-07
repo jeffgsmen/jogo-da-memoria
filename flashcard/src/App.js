@@ -1,4 +1,3 @@
-import './App.css';
 import { useState } from 'react'
 
 function App() {
@@ -7,7 +6,7 @@ function App() {
   const [fim, setfim] = useState(false)
   // https://pt-br.reactjs.org/docs/hooks-state.html
 
-  const dica = [ 'DICA1','DICA2', 'DICA3', 'DICA4' ]
+  const dica = [ 'DICA1', 'DICA2', 'DICA3', 'DICA4']
   const resposta = ['RESPOSTA1', 'RESPOSTA2', 'RESPOSTA3', 'RESPOSTA4']
 
   const hadlerButton = () => {
