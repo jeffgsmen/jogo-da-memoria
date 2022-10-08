@@ -17,11 +17,11 @@ code {
 }
 
 .card {
+  align-items: center;
   border-radius: 5px;
   box-shadow: 7px 7px 13px 0px rgba(48, 68, 115, 0.22);
-  padding: 30px;
-  margin: 20px;
-  margin-left: 15%;
+  padding: 10%;
+  margin-left: 28%;
   width: 400px;
   transition: all 0.3s ease-out;
 }
