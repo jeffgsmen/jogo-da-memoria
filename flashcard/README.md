@@ -1,4 +1,7 @@
 ## Flash-Card
+---
+
+"Flash card é um método de estudo que consiste em fazer revisões periódicas de conteúdos através de perguntas sobre um determinado assunto."
 
 ---
 
@@ -20,3 +23,4 @@ Página NotFound:
 ## Para usar a aplicação localmente
 
 Para usar a aplicação é só clonar, dar npm install para instalar as dependências e npm start para abri a aplicação.
+ 
