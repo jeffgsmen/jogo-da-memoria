@@ -1,6 +1,7 @@
 import Swal from 'sweetalert2'
 import withReactContent from 'sweetalert2-react-content'
 import { useState } from 'react'
+import { useLocation } from 'react-router-dom'
 
 function App() {
   const [isDica, setIsDica] = useState('open')
@@ -68,11 +69,13 @@ function App() {
   }
 
   const script = palavras[count][isDica]
+  const location = useLocation()
+  const nome = location.state
 
   return (
     <div className="App">
       <h1>
-          Flash Card
+          Bom Jogo {nome}
       </h1>
       <div className='card' onClick={ () => clickCard() }>
             {!fim ? (script) : (
